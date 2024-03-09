@@ -15,7 +15,7 @@ export const ContactsDataSlice = createSlice({
     },
     update: (state, action) => {
       const index = state.ContactsData.findIndex((contact) => contact.id === action.payload.id)
-      if (index) state.ContactsData[index] = action.payload
+      if (index !== -1) state.ContactsData[index] = action.payload
     },
     remove: (state, action) => {
       state.ContactsData = state.ContactsData.filter((contact) => contact.id !== action.payload.id)

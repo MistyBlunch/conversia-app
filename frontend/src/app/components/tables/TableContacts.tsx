@@ -128,7 +128,7 @@ export const TableContacts = ({ load }: {load: boolean}) => {
           />
         </div>
       ) : (
-        <div className='text-gray-500 text-center'>Aún no hay contactos :(</div>
+        <div className='text-gray-500 text-center'>No contacts yet :(</div>
       )}
     </>
   )

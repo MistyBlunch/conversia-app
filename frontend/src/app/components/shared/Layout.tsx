@@ -26,7 +26,7 @@ export const SharedLayout = ({ children, user }: { children: React.ReactNode; us
             </div>
             {user && (
               <div className='flex'>
-                Hola {user.name}!
+                Hi {user.name}!
                 <HeartIcon className='w-4 ml-2' />
                 <ArrowUturnRightIcon onClick={logOut} className='w-4 ml-2' />
               </div>

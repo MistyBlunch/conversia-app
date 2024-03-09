@@ -1,0 +1,31 @@
+type Query {
+  findContacts: [ContactWithId!]!
+}
+
+type Mutation {
+  createContact(contact: Contact!): ContactWithId!
+  deleteContact(id: Int!): Boolean
+  updateContact(id: Int!, contact: PartialContact!): ContactWithId!
+}
+
+input Contact {
+  name: String!
+  lastName: String!
+  age: Int!
+  phone: String!
+}
+
+input PartialContact {
+  name: String
+  lastName: String
+  age: Int
+  phone: String
+}
+
+type ContactWithId {
+  id: Int!
+  name: String!
+  lastName: String!
+  age: Int!
+  phone: String!
+}

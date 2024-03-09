@@ -1,0 +1,33 @@
+mutation CreateContact($contact: Contact!) {
+	createContact(contact: $contact) {
+		id
+		name
+		lastName
+		age
+		phone
+	}
+}
+
+query FindContacts {
+	findContacts {
+		id
+		name
+		lastName
+		age
+		phone
+	}
+}
+
+mutation UpdateContact($id: Int!, $contact: PartialContact!) {
+	updateContact(id: $id, contact: $contact) {
+		id
+		name
+		lastName
+		age
+		phone
+	}
+}
+
+mutation DeleteContact($id: Int!) {
+	deleteContact(id: $id)
+}

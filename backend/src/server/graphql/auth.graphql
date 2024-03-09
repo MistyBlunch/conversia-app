@@ -1,0 +1,27 @@
+type Query {
+  login(credentials: UserCredentials!): UserWithID!
+  emailIsAvailable(email: String!): Boolean!
+  refreshAccessToken(id: Int!, refreshToken: String!): String!
+}
+
+type Mutation {
+  register(user: User!): UserWithID!
+}
+
+input User {
+  name: String!
+  email: String!
+  password: String!
+}
+
+input UserCredentials {
+  email: String!
+  password: String!
+}
+
+type UserWithID {
+  id: Int!
+  name: String!
+  accessToken: String!
+  refreshToken: String!
+}

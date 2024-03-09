@@ -1,0 +1,25 @@
+query Login($credentials: UserCredentials!) {
+	login(credentials: $credentials) {
+		id
+		name
+		accessToken
+		refreshToken
+	}
+}
+
+mutation Register($user: User!) {
+	register(user: $user) {
+		id
+		name
+		accessToken
+		refreshToken
+	}
+}
+
+query EmailIsAvailable($email: String!) {
+	emailIsAvailable(email: $email)
+}
+
+query RefreshAccessToken($id: Int!, $refreshToken: String!) {
+	refreshAccessToken(id: $id, refreshToken: $refreshToken)
+}

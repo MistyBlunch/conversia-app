@@ -1,6 +1,6 @@
 import { User } from '@/lib/interfaces/User'
 import { logOut } from '@/services/User.service'
-import { HeartIcon, ArrowUturnRightIcon } from '@heroicons/react/24/outline'
+import { HeartIcon, ArrowRightStartOnRectangleIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -27,8 +27,8 @@ export const SharedLayout = ({ children, user }: { children: React.ReactNode; us
             {user && (
               <div className='flex'>
                 Hi {user.name}!
-                <HeartIcon className='w-4 ml-2' />
-                <ArrowUturnRightIcon onClick={logOut} className='w-4 ml-2' />
+                <HeartIcon className='w-4 ml-2 mr-4' />
+                  <ArrowRightStartOnRectangleIcon onClick={logOut} className='w-4 ml-2' />
               </div>
             )}
           </div>
